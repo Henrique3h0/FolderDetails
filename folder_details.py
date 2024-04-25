@@ -50,9 +50,15 @@ def tamanho_pasta_raiz(caminho):
 
     tamanho_total = 0
     for raiz, pastas, arquivos in os.walk(caminho):
-        for arquivo in arquivos:
-            caminho_arquivo = os.path.join(raiz, arquivo)
-            tamanho_total += os.path.getsize(caminho_arquivo)
+        try:
+            try:
+                for arquivo in arquivos:
+                    caminho_arquivo = os.path.join(raiz, arquivo)
+                    tamanho_total += os.path.getsize(caminho_arquivo)
+            except:
+                continue
+        except:
+            continue
     return tamanho_total
 
 def format_tamanho(tamanho_bytes):
