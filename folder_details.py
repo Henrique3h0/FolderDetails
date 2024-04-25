@@ -6,17 +6,19 @@ def tamanho_arquivos(caminho):
 
     arquivos_pastas_tamanhos = []
 
-
     for item in os.listdir(caminho):
-        caminho_completo = os.path.join(caminho, item)
+        try:
+            caminho_completo = os.path.join(caminho, item)
 
-        if os.path.isfile(caminho_completo):
-            tamanho = os.path.getsize(caminho_completo)
-            arquivos_pastas_tamanhos.append((item, tamanho))
+            if os.path.isfile(caminho_completo):
+                tamanho = os.path.getsize(caminho_completo)
+                arquivos_pastas_tamanhos.append((item, tamanho))
 
-        elif os.path.isdir(caminho_completo):
-            tamanho_pasta = tamanho_pasta_raiz(caminho_completo)
-            arquivos_pastas_tamanhos.append((item, tamanho_pasta))
+            elif os.path.isdir(caminho_completo):
+                tamanho_pasta = tamanho_pasta_raiz(caminho_completo)
+                arquivos_pastas_tamanhos.append((item, tamanho_pasta))
+        except:
+            continue
 
 
     arquivos_pastas_tamanhos = sorted(arquivos_pastas_tamanhos, key=itemgetter(1), reverse=True)
@@ -26,9 +28,12 @@ def tamanho_arquivos(caminho):
     print("="*60)
     total_usado = 0
     for nome, tamanho in arquivos_pastas_tamanhos:
-        tamanho_formatado = format_tamanho(tamanho)
-        print(f"{nome:<50} {tamanho_formatado:>10}")
-        total_usado += tamanho
+        try:
+            tamanho_formatado = format_tamanho(tamanho)
+            print(f"{nome:<50} {tamanho_formatado:>10}")
+            total_usado += tamanho
+        except:
+            continue
 
     total_formatado = format_tamanho(total_usado)
     print("="*60)
