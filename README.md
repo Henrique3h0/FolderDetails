@@ -19,7 +19,7 @@ Este programa auxilia na limpeza do disco, identificando e destacando as pastas 
 2. Execute o seguinte comando para clonar o repositório:
 
    ```bash
-   git clone https://github.com/Henrique3h0/FolderDetais
+   git clone https://github.com/Henrique3h0/FolderDetails
    ```
 
 ### Instalando os Requisitos
@@ -27,7 +27,7 @@ Este programa auxilia na limpeza do disco, identificando e destacando as pastas 
 1. Navegue até o diretório do projeto:
 
    ```bash
-   cd folderdetails
+   cd FolderDetails
    ```
 
 2. Instale as dependências utilizando o comando:
