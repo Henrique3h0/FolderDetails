@@ -49,8 +49,6 @@ Este programa auxilia na limpeza do disco, identificando e destacando as pastas 
 ## Notas Importantes
 
 ℹ️ Tenha cuidado ao excluir arquivos ou pastas. Certifique-se sempre de que está excluindo os itens corretos e que não são essenciais para o sistema.
-ℹ️ Este programa é fornecido como está, sem garantias de qualquer tipo. Use por sua própria conta e risco.
-
 ---
 
 Este programa foi desenvolvido por [LIMA](https://github.com/Henrique3h0). Qualquer dúvida ou problema, por favor, abra uma issue no repositório do projeto. Agradecemos sua colaboração!
