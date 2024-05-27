@@ -132,7 +132,7 @@ def main():
         listar_arquivos(caminho, exibir_todos=args.all, progress_bar=progress_bar)
 
     print(Fore.CYAN + "✅ ANÁLISE COMPLETA\n")
-    print(Fore.YELLOW + "🌳 GERANDO RELATORIO ARVORE:")
+    print(Fore.YELLOW + "🌳 GERANDO RELATORIO DE ARVORE:")
 
     print(tree_relatorio)
 
